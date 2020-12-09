@@ -118,7 +118,14 @@ alias gpom='git commit origin main'
 #----------------------------------------------------------
 # zstyle
 #----------------------------------------------------------
-
+# 補完候補を一覧から選択する
+zstyle ':completion:*:default' menu select=2
+# 大文字、小文字を区別せず補完する
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# 補完時のハイライト設定
+zstyle ':completion:*' list-colors ''
+# sudo の後ろでもコマンド名を補完
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
 #----------------------------------------------------------
 # umask
@@ -126,8 +133,13 @@ alias gpom='git commit origin main'
 # 新規ファイルは644、新規ディレクトリは755
 umask 022
 
-# setting for nvm 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+#----------------------------------------------------------
+# PATH
+#----------------------------------------------------------
+# nvm の読み込み
+if [ -d $HOME/.nvm ]; then
+	export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+fi
 
 path=($HOME/bin(N-/) $path)
