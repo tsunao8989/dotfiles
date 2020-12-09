@@ -22,7 +22,9 @@ local fg_blue=$'%{\e[38;5;4m%}%}'
 # oh-my-zsh 設定
 #----------------------------------------------------------
 # oh-my-zsh がインストールされている場合は設定を読み込む
-if [ ! -d ~/.oh-my-zsh ]; then
+if [ -d ~/.oh-my-zsh ]; then
+	# 初期化
+	unset PROMPT PROMPT2 RPROMPT
 	# インストール PATH
 	export ZSH="$HOME/.oh-my-zsh"
 	# 自動アップデートの無効化
@@ -113,7 +115,7 @@ alias dirs='dirs -v'
 alias glo='git log'
 alias gpu='git push'
 alias gco='git commit'
-alias gpom='git commit origin main'
+alias gpom='git push origin main'
 
 #----------------------------------------------------------
 # zstyle
