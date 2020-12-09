@@ -147,7 +147,7 @@ path=($HOME/bin(N-/) $path)
 # Ubuntu 用の設定
 #----------------------------------------------------------
 # OS が Ubuntu の場合は ls fgrep egrep の alias を設定
-if test `grep -E "Ubuntu$" /etc/lsb-release | wc -l` -eq 1; then
+if test `grep -E "Ubuntu$" /etc/lsb-release 2>&1 /dev/null | wc -l` -eq 1; then
     if test -x /usr/bin/dircolors; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls='ls -a --color=auto'
