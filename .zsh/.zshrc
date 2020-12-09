@@ -23,22 +23,22 @@ local fg_blue=$'%{\e[38;5;4m%}%}'
 #----------------------------------------------------------
 # oh-my-zsh がインストールされている場合は設定を読み込む
 if [ -d ~/.oh-my-zsh ]; then
-	# 初期化
-	unset PROMPT PROMPT2 RPROMPT
-	# インストール PATH
-	export ZSH="$HOME/.oh-my-zsh"
-	# 自動アップデートの無効化
-	export DISABLE_AUTO_UPDATE="true"
-	# テーマの変更
-	ZSH_THEME="candy"
-	# プラグインの設定
-	plugins=(git zsh-syntax-highlighting zsh-completions)
-	# oh-my-zsh の読み込み
-	source $ZSH/oh-my-zsh.sh
+    # 初期化
+    unset PROMPT PROMPT2 RPROMPT
+    # インストール PATH
+    export ZSH="$HOME/.oh-my-zsh"
+    # 自動アップデートの無効化
+    export DISABLE_AUTO_UPDATE="true"
+    # テーマの変更
+    ZSH_THEME="candy"
+    # プラグインの設定
+    plugins=(git zsh-syntax-highlighting zsh-completions)
+    # oh-my-zsh の読み込み
+    source $ZSH/oh-my-zsh.sh
 else
-	PROMPT="${fg_red}%m%(!.#.$) %{$reset_color%}"
-	PROMPT2="${fg_red}%_> %{$reset_color%}"
-	RPROMPT="${fg_red}[%~]%{$reset_color%}"
+    PROMPT="${fg_red}%m%(!.#.$) %{$reset_color%}"
+    PROMPT2="${fg_red}%_> %{$reset_color%}"
+    RPROMPT="${fg_red}[%~]%{$reset_color%}"
 fi
 
 #----------------------------------------------------------
@@ -140,8 +140,8 @@ umask 022
 #----------------------------------------------------------
 # nvm の読み込み
 if [ -d $HOME/.nvm ]; then
-	export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 fi
 
 path=($HOME/bin(N-/) $path)
