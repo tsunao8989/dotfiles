@@ -27,6 +27,8 @@ if [ -d ~/.oh-my-zsh ]; then
     plugins=(git zsh-syntax-highlighting zsh-completions)
     # oh-my-zsh の読み込み
     source $ZSH/oh-my-zsh.sh
+else
+    export PROMPT='%F{blue}%m@%n%f %F{red}%~%f$ '
 fi
 
 #----------------------------------------------------------
