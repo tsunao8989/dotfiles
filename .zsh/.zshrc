@@ -112,10 +112,15 @@ alias grep='grep --color=auto'
 alias ls='ls -AFG'
 alias dirs='dirs -v'
 # git 設定
+alias gad='git add'
 alias glo='git log'
 alias gpu='git push'
 alias gco='git commit'
 alias gpom='git push origin main'
+
+# ディレクトリ移動
+alias ...='cd ../'
+alias ....='cd ../../'
 
 #----------------------------------------------------------
 # zstyle
