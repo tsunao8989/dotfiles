@@ -7,9 +7,9 @@ git clone https://github.com/tsunao8989/dotfiles.git
 
 ## シンボリックリンクを設定
 ```bash
-ln -sf dotfiles/.zsh/.zshenv .
-ln -sf dotfiles/.zsh/.zshrc .
-ln -sf dotfiles/.vim/.vimrc .
+ln -sf dotfiles/.zsh/.zshenv ~
+ln -sf dotfiles/.zsh/.zshrc ~
+ln -sf dotfiles/.vim/.vimrc ~
 ```
 
 ## oh-my-zsh のインストール
