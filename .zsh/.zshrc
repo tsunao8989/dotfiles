@@ -3,6 +3,7 @@
 #----------------------------------------------------------
 # 言語設定
 export LANG=ja_JP.UTF-8
+export LC_ALL=en_US.UTF-8
 # PATH の追加
 export PATH=/usr/local/bin:$PATH
 # エディター設定
@@ -28,7 +29,7 @@ if [ -d ~/.oh-my-zsh ]; then
     # oh-my-zsh の読み込み
     source $ZSH/oh-my-zsh.sh
 else
-    export PROMPT='%F{blue}%m@%n%f %F{red}%~%f$ '
+    export PROMPT='%F{magenta}%m@%n%f %F{red}%~%f$ '
 fi
 
 #----------------------------------------------------------
@@ -104,7 +105,8 @@ alias dirs='dirs -v'
 # git 設定
 alias gad='git add'
 alias glo='git log'
-alias gpu='git push'
+alias gph='git push'
+alias gpl='git pull'
 alias gco='git commit'
 alias gpom='git push origin main'
 
@@ -142,5 +144,14 @@ fi
 path=($HOME/bin(N-/) $path)
 
 #----------------------------------------------------------
-# Ubuntu
+# Ubuntu 用の設定
 #----------------------------------------------------------
+# OS が Ubuntu の場合は ls fgrep egrep の alias を設定
+if test `grep -E "Ubuntu$" /etc/lsb-release 2>&1 /dev/null | wc -l` -eq 1; then
+    if test -x /usr/bin/dircolors; then
+        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+        alias ls='ls -a --color=auto'
+        alias fgrep='fgrep --color=auto'
+        alias egrep='egrep --color=auto'
+    fi
+fi
