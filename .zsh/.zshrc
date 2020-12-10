@@ -141,6 +141,11 @@ if [ -d $HOME/.nvm ]; then
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 fi
 
+if [ -d $HOME/.pyenv ]; then
+    path=($HOME/.pyenv/bin(N-/) $path)
+    eval "$(pyenv init -)"
+fi
+
 path=($HOME/bin(N-/) $path)
 
 #----------------------------------------------------------
