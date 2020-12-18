@@ -26,4 +26,5 @@ sh ./installer.sh ~/.vim/dein/
 
 ## 参考にさせてもらったサイト
 [【詳解】モテたいVimmer必見　快適にコーディングするためのvimrc解説](https://qiita.com/ahiruman5/items/4f3c845500c172a02935)
+
 [dein.vimでプラグイン管理のはじめ方](https://qiita.com/sugamondo/items/fcaf210ca86d65bcaca8)
