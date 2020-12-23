@@ -114,6 +114,11 @@ alias gpom='git push origin main'
 alias ...='cd ../'
 alias ....='cd ../../'
 
+# Vagrant
+alias vgu='vagrant up'
+alias vgh='vagrant halt'
+alias vgs='vagrant ssh'
+
 #----------------------------------------------------------
 # zstyle
 #----------------------------------------------------------
