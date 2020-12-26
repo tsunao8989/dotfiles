@@ -46,7 +46,7 @@
 
     // Terminal
     "terminal.integrated.fontFamily": "Ricty", // フォント
-    "terminal.integrated.fontSize": 12, // フォントサイズ
+    "terminal.integrated.fontSize": 11, // フォントサイズ
     "terminal.integrated.letterSpacing": 1.5,
     "workbench.editorAssociations": [
         {
