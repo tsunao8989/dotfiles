@@ -22,7 +22,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ## dein.vim のインストール
 ```bash
 cd ~ && curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-mkidr -p .vim/dein
+mkdir -p .vim/dein
 sh ./installer.sh ~/.vim/dein/
 ```
 
