@@ -151,6 +151,11 @@ if [ -d $HOME/.pyenv ]; then
     eval "$(pyenv init -)"
 fi
 
+# Rust の設定
+if [ -d $HOME/.cargo ]; then
+    source $HOME/.cargo/env
+fi
+
 path=($HOME/bin(N-/) $path)
 
 #----------------------------------------------------------
