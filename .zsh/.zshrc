@@ -102,6 +102,7 @@ alias grep='grep --color=auto'
 # 色付きで隠しファイルも表示
 alias ls='ls -AFG'
 alias dirs='dirs -v'
+alias cd='cd && ls'
 # git 設定
 alias gad='git add'
 alias glo='git log'
