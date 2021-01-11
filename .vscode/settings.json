@@ -60,4 +60,6 @@
     // Windows のみ
     //"glassit.alpha": 255,
     //"glassit.step": 1,
+    //"terminal.integrated.shell.linux": "/usr/bin/zsh",
+    //"terminal.integrated.automationShell.linux": "/usr/bin/zsh",
 }
