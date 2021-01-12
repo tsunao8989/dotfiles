@@ -102,7 +102,6 @@ alias grep='grep --color=auto'
 # 色付きで隠しファイルも表示
 alias ls='ls -AFG'
 alias dirs='dirs -v'
-alias cd='cd && ls'
 # git 設定
 alias gad='git add'
 alias glo='git log'
@@ -119,6 +118,15 @@ alias ....='cd ../../'
 alias vgu='vagrant up'
 alias vgh='vagrant halt'
 alias vgs='vagrant ssh'
+
+alias hw='sudo hwclock -s'
+
+# Docker
+alias dkpl='docker pull'
+alias dkrn='docker run'
+alias dkps='docker ps -all'
+alias dklg='docker logs'
+alias dkhis='docker history'
 
 #----------------------------------------------------------
 # zstyle
