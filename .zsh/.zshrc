@@ -124,6 +124,7 @@ alias hw='sudo hwclock -s'
 # Docker
 alias dkpl='docker pull'
 alias dkrn='docker run'
+alias dkrmi="docker rmi'
 alias dkps='docker ps -all'
 alias dklg='docker logs'
 alias dkhis='docker history'
