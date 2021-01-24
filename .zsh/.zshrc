@@ -166,6 +166,11 @@ if [ -d $HOME/.cargo ]; then
     source $HOME/.cargo/env
 fi
 
+if [ -d $HOME/go ]; then
+    export GOPATH=$HOME/.go
+    export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+fi
+
 path=($HOME/bin(N-/) $path)
 
 #----------------------------------------------------------
