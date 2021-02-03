@@ -167,8 +167,9 @@ if [ -d $HOME/.cargo ]; then
 fi
 
 if [ -d $HOME/go ]; then
-    export GOPATH=$HOME/.go
-    export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/go
+    export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 fi
 
 path=($HOME/bin(N-/) $path)
