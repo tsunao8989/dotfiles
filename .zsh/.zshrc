@@ -17,7 +17,7 @@ DIRSTACKSIZE=20
 # Prezto がインストールされている場合は設定を読み込む
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-  zstyle ':prezto:module:prompt' theme 'paradox'
+  #zstyle ':prezto:module:prompt' theme 'paradox'
 fi
 
 #----------------------------------------------------------
