@@ -27,6 +27,8 @@ colorscheme desert
 highlight LineNr ctermfg=red
 " vim は bash を使用
 set shell=/bin/bash
+"" Title を表示しない
+set notitle
 
 "----------------------------------------------------------
 " タブ・インデント
@@ -43,6 +45,7 @@ set autoindent
 set smartindent
 " smartindent で増減する幅
 set shiftwidth=4
+
 
 "----------------------------------------------------------
 " 文字検索
