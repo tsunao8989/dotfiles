@@ -12,24 +12,12 @@ export EDITOR=vim
 DIRSTACKSIZE=20
 
 #----------------------------------------------------------
-# oh-my-zsh 設定
+# Prezto 設定
 #----------------------------------------------------------
-# oh-my-zsh がインストールされている場合は設定を読み込む
-if [ -d ~/.oh-my-zsh ]; then
-    # 初期化
-    unset PROMPT PROMPT2 RPROMPT
-    # インストール PATH
-    export ZSH="$HOME/.oh-my-zsh"
-    # 自動アップデートの無効化
-    export DISABLE_AUTO_UPDATE="true"
-    # テーマの変更
-    ZSH_THEME="candy"
-    # プラグインの設定
-    plugins=(git zsh-syntax-highlighting zsh-completions)
-    # oh-my-zsh の読み込み
-    source $ZSH/oh-my-zsh.sh
-else
-    export PROMPT='%F{magenta}%m@%n%f %F{red}%~%f$ '
+# Prezto がインストールされている場合は設定を読み込む
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+  zstyle ':prezto:module:prompt' theme 'paradox'
 fi
 
 #----------------------------------------------------------
