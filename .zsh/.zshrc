@@ -18,6 +18,7 @@ DIRSTACKSIZE=20
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
   #zstyle ':prezto:module:prompt' theme 'paradox'
+  export PATH=$(echo $PATH | tr ':' '\n' | grep -v "/mnt/c/" | tr '\n' ':')
 fi
 
 #----------------------------------------------------------
@@ -46,10 +47,10 @@ setopt pushd_ignore_dups
 setopt no_auto_remove_slash
 # 隠しファイルも補完
 setopt glob_dots
-# スペルミスの修正候補を提示
-setopt correct
-# ファイル名のスペルミスの修正候補を提示
-setopt correct_all
+# スペルミスの修正候補提示を無効化
+unsetopt correct
+# corrrect 機能の無効化
+unsetopt correct_all
 # history コマンドは履歴に記録しない
 setopt hist_no_store
 # コマンド履歴に実行時間も記録
@@ -75,7 +76,7 @@ SAVEHIST=100000
 # キーバインド
 #----------------------------------------------------------
 # キーバインドを vim モードに設定
-bindkey -v
+# bindkey -v
 
 #----------------------------------------------------------
 # alias 設定
@@ -87,8 +88,11 @@ alias vi='vim'
 alias history='history -Di 1'
 # grep で検索した文字列をハイライト
 alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 # 色付きで隠しファイルも表示
-alias ls='ls -AFG'
+alias ls='ls -a --color=auto'
+#alias ls='ls -AFG'
 alias dirs='dirs -v'
 # git 設定
 alias gad='git add'
@@ -157,20 +161,11 @@ fi
 if [ -d $HOME/go ]; then
     export GOROOT=/usr/local/go
     export GOPATH=$HOME/go
-    export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+    path=($GOPATH/bin(N-/) $GOROOT/bin(N-/) $path)
 fi
 
 path=($HOME/bin(N-/) $path)
 
-#----------------------------------------------------------
-# Ubuntu 用の設定
-#----------------------------------------------------------
-# OS が Ubuntu の場合は ls fgrep egrep の alias を設定
-if test `grep -E "Ubuntu$" /etc/lsb-release 2>&1 /dev/null | wc -l` -eq 1; then
-    if test -x /usr/bin/dircolors; then
-        test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-        alias ls='ls -a --color=auto'
-        alias fgrep='fgrep --color=auto'
-        alias egrep='egrep --color=auto'
-    fi
+if test -x /usr/bin/dircolors; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
