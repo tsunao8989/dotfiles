@@ -1,5 +1,4 @@
 {
-    "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "files.exclude": {
         "**/.classpath": true,
@@ -8,7 +7,6 @@
         "**/.factorypath": true
     },
 
-    "workbench.startupEditor": "newUntitledFile",
     //"editor.fontFamily": "Ricty Discord",
     // Python
     "[python]": {
@@ -25,47 +23,76 @@
         "editor.tabSize": 2,
         "editor.insertSpaces": true
     },
+
     //"editor.letterSpacing": 0.5,
+    "editor.suggestSelection": "first",
+
+    // 文字サイズ
+    "editor.fontSize": 12,
     "editor.tabSize": 4,
-    "editor.roundedSelection": true, // 選択範囲の角を丸める
+
+    // 選択範囲の角を丸める
+    "editor.roundedSelection": true, 
+    // 補完候補の自動表示
     "editor.quickSuggestions": {
-        "comments": false, // コメント内では無効
-        "strings": true, // 文字列内では有効
-        "other": true //  その他の場所で有効
-    }, // 補完候補の自動表示
-    "editor.formatOnType": true, // コード整形
-    "editor.formatOnPaste": true, // コード整形
-    "editor.lineNumbers": "on", // 行番号の表示
-    "editor.suggestFontSize": 12, // サジェストの文字サイズ
-    "editor.suggestLineHeight": 12, // サジェスト欄の行の高さ
-    "editor.insertSpaces": true, // Tabキーで半角スペースを入力
-    "editor.fontSize": 12, //  文字サイズ
-    "editor.renderIndentGuides": true, // インデントのガイドラインを表示
-    "editor.minimap.renderCharacters": false, // ミニマップを簡略化
-    "editor.minimap.showSlider": "always", // ミニマップのハイライトを常に表示
-    "editor.minimap.side": "right", // ミニマップを右に表示
-    "editor.cursorStyle": "line", // カーソルの形状
-    "editor.cursorBlinking": "smooth", // カーソルの表示形式
-    "editor.cursorWidth": 2, // カーソル幅
-    "editor.links": false, // リンクをクリック可能に
-    "editor.matchBrackets": true, // 対応する括弧の強調表示をオンに
+        // コメント内では無効
+        "comments": false, 
+        // 文字列内では有効
+        "strings": true, 
+        // その他の場所で有効
+        "other": true 
+    }, 
+    // コード整形
+    "editor.formatOnType": true, 
+    "editor.formatOnPaste": true,
+    // 行番号の表示
+    "editor.lineNumbers": "on",
+    // サジェストの文字サイズ
+    "editor.suggestFontSize": 12, 
+    //"editor.suggestLineHeight": 12,
+
+    // Tabキーで半角スペースを入力
+    "editor.insertSpaces": true, 
+
+    // インデントのガイドラインを表示
+    "editor.renderIndentGuides": true,
+    // ミニマップを簡略化
+    "editor.minimap.renderCharacters": true,
+    // ミニマップのハイライトを常に表示
+    "editor.minimap.showSlider": "mouseover", 
+    // ミニマップを右に表示
+    "editor.minimap.side": "right", 
+    // カーソルの形状
+    "editor.cursorStyle": "line", 
+    // カーソルの表示形式
+    "editor.cursorBlinking": "smooth", 
+    // カーソル幅
+    "editor.cursorWidth": 2, 
+    // リンクをクリック可能に
+    "editor.links": false, 
+    // 対応する括弧の強調表示をオンに
+    "editor.matchBrackets": "always", 
+    "editor.colorDecorators": false,
+
     // Terminal
     "terminal.integrated.fontFamily": "HackGen Console", // フォント
-    "terminal.integrated.fontSize": 12, // フォントサイズ
+    "terminal.integrated.fontSize": 13, // フォントサイズ
     "terminal.integrated.letterSpacing": 1.5,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "terminal.integrated.automationShell.linux": "/usr/bin/zsh",    
+    
+    // MacOSX の Terminal（zsh） 対応
+    //"terminal.integrated.shell.osx": "/bin/zsh",
+    // Windows のみ
+    "glassit.alpha": 255,
+    "glassit.step": 1,
+
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.startupEditor": "newUntitledFile",
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
             "filenamePattern": "*.ipynb"
         }
     ],
-    "editor.colorDecorators": false,
-    // MacOSX の Terminal（zsh） 対応
-    //"terminal.integrated.shell.osx": "/bin/zsh",
-    // Windows のみ
-    "glassit.alpha": 255,
-    "glassit.step": 1,
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "terminal.integrated.automationShell.linux": "/usr/bin/zsh",
-    "workbench.colorTheme": "Visual Studio Light",
 }
