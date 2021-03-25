@@ -32,9 +32,9 @@ $ vi ~/.zshrc
 
 ## dein.vim のインストール
 ```bash
-cd ~ && curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
-mkdir -p .vim/dein
-sh ./installer.sh ~/.vim/dein/
+$ cd ~ && curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+$ mkdir -p .vim/dein
+$ sh ./installer.sh ~/.vim/dein/
 ```
 
 ## 参考にさせてもらったサイト
