@@ -121,6 +121,11 @@ alias dkps='docker ps -all'
 alias dklg='docker logs'
 alias dkhis='docker history'
 
+# Windows
+alias code="'/mnt/c/Program Files/Microsoft VS Code/bin/code'"
+export PATH="/mnt/c/Program Files/Docker/Docker/resources/bin:$PATH"
+export PATH="/mnt/c/ProgramData/DockerDesktop/version-bin:$PATH"
+
 #----------------------------------------------------------
 # zstyle
 #----------------------------------------------------------
